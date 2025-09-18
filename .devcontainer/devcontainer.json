@@ -1,0 +1,27 @@
+{
+  "name": "Environment Wizard Setup",
+  "build": {
+    "dockerfile": "../Dockerfile",
+    "context": ".."
+  },
+  "features": {},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-vscode.vscode-json"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/bin/python",
+        "python.terminal.activateEnvironment": true
+      }
+    }
+  },
+  "forwardPorts": [],
+  "portsAttributes": {},
+  "remoteEnv": {},
+  "shutdownAction": "stopContainer",
+  "postCreateCommand": "/usr/local/bin/copy-repo.sh"
+}
